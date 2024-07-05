@@ -1,9 +1,12 @@
 // import 'package:event_calander/function.dart';
 import 'package:event_calander/event_calendar.dart';
+import 'package:event_calander/place%20API.dart';
+import 'package:event_calander/timeSlot_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:calendar_view/calendar_view.dart';
+// import 'package:calendar_view/calendar_view.dart';
 
 import 'chart.dart';
+import 'function.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +20,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // home: FunctionTesting()
-
+ home: MyHomePage()
+ // home: GooglePlacesSearchWidget(apiKey: 'AIzaSyCHjdNb9HxLuysDr1ZbJyNsQYRob6k5DkM',)
 
 
       // home: CustomLineChart(
@@ -34,14 +38,14 @@ class MyApp extends StatelessWidget {
       //   asep: 6000,
       //   anov: 3000,
       // ),
-home:
-      EventCalandar(events: [
-        ShipmentRecord(id: 12, pickUpDate: "2024-05-01", pickUpHour: '2:00 AM', carrier: "TCCP"),
-        ShipmentRecord(id: 12, pickUpDate: "2024-05-02", pickUpHour: '2:00 AM', carrier: "TCCP"),
-        ShipmentRecord(id: 12, pickUpDate: "2024-05-03", pickUpHour: '2:00 AM', carrier: "TCCP"),
-        ShipmentRecord(id: 12, pickUpDate: "2024-05-04", pickUpHour: '2:00 AM', carrier: "TCCP"),
-
-      ]),
+// home:
+//       EventCalandar(events: [
+//         ShipmentRecord(id: 12, pickUpDate: "2024-05-01", pickUpHour: '2:00 AM', carrier: "TCCP"),
+//         ShipmentRecord(id: 12, pickUpDate: "2024-05-02", pickUpHour: '2:00 AM', carrier: "TCCP"),
+//         ShipmentRecord(id: 12, pickUpDate: "2024-05-03", pickUpHour: '2:00 AM', carrier: "TCCP"),
+//         ShipmentRecord(id: 12, pickUpDate: "2024-05-04", pickUpHour: '2:00 AM', carrier: "TCCP"),
+//
+//       ]),
     );
   }
 }

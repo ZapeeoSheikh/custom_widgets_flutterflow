@@ -1,8 +1,8 @@
 // import 'dart:io';
 
 import 'dart:io';
-
-import 'package:file_picker/file_picker.dart';
+import 'package:geocode/geocode.dart';
+// import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -84,3 +84,51 @@ class ShipmentRecord {
   });
 }
 
+
+
+class AddressToLatLng extends StatefulWidget {
+  const AddressToLatLng({super.key});
+
+  @override
+  State<AddressToLatLng> createState() => _AddressToLatLngState();
+}
+
+class _AddressToLatLngState extends State<AddressToLatLng> {
+  String Latlng = "";
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(Latlng),
+          ElevatedButton(onPressed: (){
+              geocode();
+          }, child: Text("Press me"))
+        ],
+      ),
+    );
+  }
+
+
+
+
+  void geocode() async {
+
+    GeoCode geoCode = GeoCode();
+
+    try {
+      Coordinates coordinates = await geoCode.forwardGeocoding(
+          address: "Choburji Quaters Lahore");
+      setState(() {
+      print("Latitude: ${coordinates.latitude}");
+      print("Longitude: ${coordinates.longitude}");
+      Latlng = "Latitude: ${coordinates.latitude}, Longitude: ${coordinates.longitude}";
+      });
+    } catch (e) {
+      print(e);
+    }
+
+  }
+}
