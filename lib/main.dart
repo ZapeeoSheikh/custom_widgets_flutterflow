@@ -1,6 +1,7 @@
 // import 'package:event_calander/function.dart';
 import 'package:event_calander/event_calendar.dart';
 import 'package:event_calander/place%20API.dart';
+import 'package:event_calander/range_slider.dart';
 import 'package:event_calander/timeSlot_picker.dart';
 import 'package:flutter/material.dart';
 // import 'package:calendar_view/calendar_view.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // home: FunctionTesting()
- home: MyHomePage()
+ home: DoubleSlider(startPoint: 20, endPoint: 80)
  // home: GooglePlacesSearchWidget(apiKey: 'AIzaSyCHjdNb9HxLuysDr1ZbJyNsQYRob6k5DkM',)
 
 

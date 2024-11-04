@@ -42,7 +42,7 @@ dependencies:
   http:
   convert:
   geocode:
-  flutter_stripe:
+#  flutter_stripe:
   time_slot:
   flutter_stepindicator:
 
