@@ -1,13 +1,18 @@
 // import 'package:event_calander/function.dart';
+import 'package:event_calander/bookingType.dart';
 import 'package:event_calander/event_calendar.dart';
+import 'package:event_calander/percentage_bar.dart';
 import 'package:event_calander/place%20API.dart';
 import 'package:event_calander/range_slider.dart';
 import 'package:event_calander/timeSlot_picker.dart';
 import 'package:flutter/material.dart';
 // import 'package:calendar_view/calendar_view.dart';
 
+import 'availablity_kalender.dart';
+import 'barchart.dart';
 import 'chart.dart';
 import 'function.dart';
+import 'linechart.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,8 +25,34 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      home: CustomBarChart(
+        weekSpots: [10, 20, 3, 40, 25, 16,47 ],
+        monthSpots: [100, 20, 300, 40, 50, 600, 70],
+        month3Spots: [100, 20, 300, 402, 520, 610, 750],
+        month6Spots: [100, 2000, 300, 4010, 5020, 600, 7000],
+        yearSpots: [10000, 20000, 30000, 40000, 50000, 60000, 70000],
+        allYearSpots: [
+          DataPoint(year: 2022, value: 1298),
+          DataPoint(year: 2023, value: 10298),
+          DataPoint(year: 2024, value: 3298),
+        ],)
+
+
+
+
       // home: FunctionTesting()
- home: DoubleSlider(startPoint: 20, endPoint: 80)
+ // home: DoubleSlider(startPoint: 20, endPoint: 80)
+ // home: PercentageBar(value1: 10000, value2: 2000, value3: 5000,)
+ // home: StaticCalendarWidget(
+ //   startingEvent: DateTime.now(),
+ //   endingEvent: DateTime.now(),
+ //   bookings:  [
+ //     BookingsRecord(clientId: "1", workerId: "1", serviceId: "1", status: "Paid", scheduledAt: DateTime(2024, 11, 4), completedAt: DateTime.now(), price: 232, review: "review", createdAt: DateTime.now(), updatedAt: DateTime(2024, 12, 4), city: "Lahore", startTime: DateTime.now(), endTime: DateTime.now(), equiped: true, cleanedElec: true, contract: true, numberHour: 23, address: "address")
+ //   ],
+ //   unaivability: [
+ //     UnavailabilityRecord(startTime: DateTime.now().add(Duration(hours: 2)), endTime: DateTime.now().add(Duration(hours: 3)), workerId: "1")
+ //       ],
+ // )
  // home: GooglePlacesSearchWidget(apiKey: 'AIzaSyCHjdNb9HxLuysDr1ZbJyNsQYRob6k5DkM',)
 
 

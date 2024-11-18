@@ -176,6 +176,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.19.0"
+  kalender:
+    dependency: "direct main"
+    description:
+      name: kalender
+      sha256: "63f1cdfbef014f5fd6d6f7552b2668034d10f98921601f9b6918af4e2074bc77"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.2"
   leak_tracker:
     dependency: transitive
     description:
@@ -248,6 +256,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  scrollable_positioned_list:
+    dependency: transitive
+    description:
+      name: scrollable_positioned_list
+      sha256: "1b54d5f1329a1e263269abc9e2543d90806131aa14fe7c6062a8054d57249287"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.8"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -285,6 +301,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+  syncfusion_flutter_charts:
+    dependency: "direct main"
+    description:
+      name: syncfusion_flutter_charts
+      sha256: f14547b70ad0a662d1f65e8fb79b7178b0dea439d3fc9cb13da8aa4714fecb96
+      url: "https://pub.dev"
+    source: hosted
+    version: "27.2.2"
+  syncfusion_flutter_core:
+    dependency: transitive
+    description:
+      name: syncfusion_flutter_core
+      sha256: "225b1cc135549bb4eef096d63b7323c30ee61c4b095c7e8a14bf9333e243d84b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "27.2.2"
   term_glyph:
     dependency: transitive
     description:

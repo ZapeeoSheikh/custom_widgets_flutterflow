@@ -1,3 +1,4 @@
+import 'package:event_calander/percentage_bar.dart';
 import 'package:flutter/material.dart';
 
 class DoubleSlider extends StatefulWidget {
